@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the number</title>
+</head>
+<body>
+<div style="text-align: center;">
+    <h1>Guess The Number Game</h1>
+    <h3 th:text="${mainMessage}">Main Message Part</h3>
+    <!--    <h3 th:text="${__${T(vip.dacha.util.AttributeNames).MAIN_MESSAGE}__}">Main Message Part</h3>-->
+
+    <h3 th:text="${resultMessage}">Result Message Part</h3>
+    <!--    <h3 th:text="${__${T(vip.dacha.util.AttributeNames).getResultMessage()}__}">Result Message Part</h3>-->
+
+    <form method="post" th:action="play">
+        <label for="guess">enter your guess</label>
+        <input autofocus id="guess" name="guess" type="number"/>
+
+        <input name="SUBMIR" type="submit"/>
+    </form>
+
+
+</div>
+</body>
+</html>
